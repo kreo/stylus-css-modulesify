@@ -1,0 +1,27 @@
+{
+  "name": "stylus-css-modulesify",
+  "version": "1.0.0",
+  "description": "an example of how stylus and css-modules can be used together.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "stylus": "stylus src/main.styl --sourcemap-inline -o public/main.css",
+    "html": "cp src/index.html public",
+    "js": "browserify -t [ css-modulesify -o main.css ] -t babelify src/main.jsx -o public/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/romeovs/stylus-css-modulesify.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/romeovs/stylus-css-modulesify/issues"
+  },
+  "homepage": "https://github.com/romeovs/stylus-css-modulesify#readme",
+  "devDependencies": {
+    "babelify": "^6.3.0",
+    "browserify": "^11.0.1",
+    "css-modulesify": "^0.6.1"
+  }
+}
