@@ -27,4 +27,7 @@ At the moment, I can see two problems:
 - `css-modulesify` is not able to understand stylus syntax.
 - `stylus` does not generate the garbled names css-modules works on.
 
+One way to fix this is to add `src/main.styl` as a second entry point that
+compiles to `main.css`, so that the dependencies can be shared (from stylus and
+js perspective).  I have no idea how hard it would be to implement this.
 
